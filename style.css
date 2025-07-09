@@ -210,12 +210,14 @@ a:hover {
 /* 🆕 Experience Section Styling */
 
 .experience-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 25px;
   margin-top: 20px;
   padding: 0 10px;
-  justify-items: stretch;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .experience-card {
@@ -226,9 +228,6 @@ a:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   color: #eee;
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
