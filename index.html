@@ -11,17 +11,21 @@
   <div id="tsparticles"></div>
 
   <!-- 🌐 Top Navigation -->
-  <nav class="top-nav transparent-nav">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <nav class="top-nav">
+    <div class="nav-container">
+      <div class="logo">Praneeth Koduru</div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
   <header id="home">
@@ -46,7 +50,6 @@
   <section id="experience">
     <h2 class="gradient-header">Experience</h2>
     <!-- (All experience cards remain unchanged) -->
-    <!-- Include all your experience cards here exactly as they were -->
   </section>
 
   <section id="education">
@@ -65,49 +68,49 @@
 
   <section id="certifications">
     <h2 class="gradient-header">Certifications</h2>
-  <div class="cert-grid">
+    <div class="cert-grid">
 
-    <div class="cert-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/PMI_logo.svg" alt="PMP Badge" />
-      <div>
-        <strong>Project Management Professional (PMP) – Project Management Institute (PMI)</strong>
-        <p>Validated advanced project planning, leadership, stakeholder and risk management across complex projects.</p>
+      <div class="cert-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/PMI_logo.svg" alt="PMP Badge" />
+        <div>
+          <strong>Project Management Professional (PMP) – Project Management Institute (PMI)</strong>
+          <p>Validated advanced project planning, leadership, stakeholder and risk management across complex projects.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="cert-card">
-      <img src="https://media.licdn.com/dms/image/D4E0BAQEfhU1nl8sl4A/company-logo_200_200/0/1708570642886?e=2147483647&v=beta&t=nF9nfdEPY6_kHF2IffOfIl-T3G4PUhV40oxrgftZCHM" alt="Atlassian Agile Badge" />
-      <div>
-        <strong>Atlassian Agile Project Management Professional Certificate – Atlassian University</strong>
-        <p>Learned Agile principles, sprint planning, Jira workflows, and Agile team collaboration best practices.</p>
-        <a href="https://www.linkedin.com/learning/certificates/5d127e3c541d0806e7728f64dadc958a3788590707273c9e0b6e5d698d7ebf3c" target="_blank">View Credential</a>
+      <div class="cert-card">
+        <img src="https://media.licdn.com/dms/image/D4E0BAQEfhU1nl8sl4A/company-logo_200_200/0/1708570642886?e=2147483647&v=beta&t=nF9nfdEPY6_kHF2IffOfIl-T3G4PUhV40oxrgftZCHM" alt="Atlassian Agile Badge" />
+        <div>
+          <strong>Atlassian Agile Project Management Professional Certificate – Atlassian University</strong>
+          <p>Learned Agile principles, sprint planning, Jira workflows, and Agile team collaboration best practices.</p>
+          <a href="https://www.linkedin.com/learning/certificates/5d127e3c541d0806e7728f64dadc958a3788590707273c9e0b6e5d698d7ebf3c" target="_blank">View Credential</a>
+        </div>
       </div>
-    </div>
 
-    <div class="cert-card">
-      <img src="https://images.credly.com/images/28944964-3097-403d-a9a2-9718f2d4c353/image.png" alt="PSPO I Badge" />
-      <div>
-        <strong>Professional Scrum Product Owner I (PSPO I) – Scrum.org</strong>
-        <p>Developed expertise in maximizing product value, managing backlogs, and applying Scrum principles in real-world scenarios.</p>
-        <a href="https://www.credly.com/badges/49ba24bb-d48a-4b16-96a5-a88285b1510f/linked_in_profile" target="_blank">View Credential</a>
+      <div class="cert-card">
+        <img src="https://images.credly.com/images/28944964-3097-403d-a9a2-9718f2d4c353/image.png" alt="PSPO I Badge" />
+        <div>
+          <strong>Professional Scrum Product Owner I (PSPO I) – Scrum.org</strong>
+          <p>Developed expertise in maximizing product value, managing backlogs, and applying Scrum principles in real-world scenarios.</p>
+          <a href="https://www.credly.com/badges/49ba24bb-d48a-4b16-96a5-a88285b1510f/linked_in_profile" target="_blank">View Credential</a>
+        </div>
       </div>
-    </div>
 
-    <div class="cert-card">
-      <img src="https://media.licdn.com/dms/image/D4E0BAQFeRQ3vSMvxnw/learning-public-crop_288_512/0/1693492517676?e=2147483647&v=beta&t=KMeFnJNjA3czkgb3j5INXaDCmDyQtkjXYA5sNFZoHRY" alt="Gen AI Badge" />
-      <div>
-        <strong>Generative AI for Product Managers – LinkedIn Learning</strong>
-        <p>Explored how to apply generative AI in product discovery, user research, content creation, and roadmap planning.</p>
-        <a href="https://www.linkedin.com/learning/certificates/a41f8e4e6745809068443816da56340b0664a50913b7bef5d57fae84e3cbf579" target="_blank">View Credential</a>
+      <div class="cert-card">
+        <img src="https://media.licdn.com/dms/image/D4E0BAQFeRQ3vSMvxnw/learning-public-crop_288_512/0/1693492517676?e=2147483647&v=beta&t=KMeFnJNjA3czkgb3j5INXaDCmDyQtkjXYA5sNFZoHRY" alt="Gen AI Badge" />
+        <div>
+          <strong>Generative AI for Product Managers – LinkedIn Learning</strong>
+          <p>Explored how to apply generative AI in product discovery, user research, content creation, and roadmap planning.</p>
+          <a href="https://www.linkedin.com/learning/certificates/a41f8e4e6745809068443816da56340b0664a50913b7bef5d57fae84e3cbf579" target="_blank">View Credential</a>
+        </div>
       </div>
-    </div>
 
-  </div>
+    </div>
   </section>
 
   <section id="skills">
     <h2 class="gradient-header">Skills</h2>
-    <!-- (Skills layout remains unchanged) -->
+    <!-- Skills layout remains unchanged -->
   </section>
 
   <section id="projects">
@@ -154,7 +157,7 @@
         }
       },
       particles: {
-        color: { value: ["#00bcd4", "#03A9F4", "#FF9800", "#F50057"] },
+        color: { value: ["#BB86FC", "#03A9F4", "#FF9800", "#F50057"] },
         links: { enable: false },
         move: {
           enable: true,
@@ -197,6 +200,14 @@
 
     window.addEventListener("scroll", updateProgress);
     window.addEventListener("load", updateProgress);
+  </script>
+
+  <!-- 🍔 Mobile Menu Toggle Script -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("show");
+    }
   </script>
 </body>
 </html>
