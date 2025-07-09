@@ -11,87 +11,145 @@
   <div id="tsparticles"></div>
 
   <!-- 🌐 Top Navigation -->
-  <!-- ... (no change here, keeping your existing nav and content as-is) ... -->
+  <nav class="top-nav transparent-nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <!-- ⬇️ Place your full portfolio content here like before (unchanged) -->
+  <header id="home">
+    <img src="images/profile.jpg" alt="Praneeth Koduru" class="profile-photo" />
+    <h1>Hi, I'm Praneeth Koduru</h1>
+    <p>Product Manager | Scrum Master | Business Analyst</p>
+    <p>
+      I thrive at the crossroads of business strategy and team execution. With 6+ years across healthcare and transportation, I’ve led Agile teams, driven digital transformations, and delivered features that improved team efficiency and user satisfaction. Now, I’m focused on building intuitive, scalable products that solve real problems and create real impact. Let’s build something meaningful together.
+    </p>
+  </header>
 
-  <!-- 👇 Particle Enhancement Script -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I come from humble beginnings in India, where my father instilled in me the belief that education is the key that sets us apart. During my undergraduate studies, I set my sights on pursuing a master’s degree abroad—not just for academic growth, but to gain invaluable exposure to new cultures and perspectives.
+    </p>
+    <p>
+      Learning is a lifelong journey. My family of graduates inspires me to grow continuously and give back. I aim to build user-centered digital solutions that align business strategy with real user needs.
+    </p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-grid">
+      <!-- Your experience cards go here -->
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="experience-grid">
+      <div class="experience-card">
+        <h3>University of North Texas <span>2021 – 2023</span></h3>
+        <h4>Master of Science – Computer Engineering</h4>
+      </div>
+      <div class="experience-card">
+        <h3>Gandhi Institute of Technology <span>2013 – 2017</span></h3>
+        <h4>Bachelor of Technology – Electronics & Communication Engineering</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Certified Scrum Master (CSM)</li>
+      <li>SAFe 6 Certified Scrum Master</li>
+      <li>HIPAA for Professionals</li>
+      <li>Power BI Data Analyst Associate</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <!-- Skill groups here -->
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Coming soon!</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: kodurup3066@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/praneethkoduru/" target="_blank">View Profile</a></p>
+  </section>
+
+  <!-- 🔽 Bottom Navigation -->
+  <nav class="bottom-nav transparent-nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <footer>
+    <p>© 2025 Praneeth Koduru</p>
+  </footer>
+
+  <a href="#home" id="back-to-top" title="Back to top">↑</a>
+
+  <!-- ✨ Simple Floating Particles Script (no links, smooth float) -->
   <script>
-    let particlesInstance;
-    let scrollVelocity = 0;
-    let lastScrollY = window.scrollY;
-    let lastTime = performance.now();
-
-    // Load particles
     tsParticles.load("tsparticles", {
       fullScreen: { enable: true, zIndex: -10 },
       background: { color: { value: "transparent" } },
       fpsLimit: 60,
       interactivity: {
-        detectsOn: "canvas",
         events: {
           onHover: { enable: true, mode: "repulse" },
           onClick: { enable: true, mode: "push" },
           resize: true
         },
         modes: {
-          repulse: { distance: 100, duration: 0.4 },
+          repulse: { distance: 80, duration: 0.4 },
           push: { quantity: 4 }
         }
       },
       particles: {
         color: { value: ["#BB86FC", "#03A9F4", "#FF9800", "#F50057"] },
-        links: {
-          enable: true,
-          color: "#ffffff",
-          distance: 120,
-          opacity: 0.2,
-          width: 1
-        },
+        links: { enable: false }, // 🔧 NO LINES
         move: {
           enable: true,
-          speed: 0.5,
+          speed: 0.6,
           direction: "none",
-          outModes: { default: "out" },
-          parallax: { enable: true, force: 100, smooth: 10 }
+          random: true,
+          straight: false,
+          outModes: { default: "out" }
         },
         number: {
-          density: { enable: true, area: 800 },
-          value: 100
+          value: 90,
+          density: { enable: true, area: 800 }
         },
         opacity: { value: 0.6 },
         shape: { type: ["circle", "triangle", "edge"] },
         size: { value: { min: 1, max: 3 } }
       },
       detectRetina: true
-    }).then(instance => {
-      particlesInstance = instance;
     });
-
-    // Update scroll speed & apply to particles
-    function animateParticleSpeed() {
-      const currentY = window.scrollY;
-      const currentTime = performance.now();
-      const deltaY = Math.abs(currentY - lastScrollY);
-      const deltaTime = (currentTime - lastTime) / 1000;
-
-      const speed = deltaTime > 0 ? deltaY / deltaTime : 0;
-      scrollVelocity = speed;
-
-      const adjustedSpeed = Math.min(4, 0.5 + scrollVelocity / 300);
-
-      if (particlesInstance) {
-        particlesInstance.options.particles.move.speed = adjustedSpeed;
-        particlesInstance.refresh();
-      }
-
-      lastScrollY = currentY;
-      lastTime = currentTime;
-
-      requestAnimationFrame(animateParticleSpeed);
-    }
-
-    requestAnimationFrame(animateParticleSpeed);
   </script>
 </body>
 </html>
