@@ -22,6 +22,11 @@ header, section {
   text-shadow: 0 0 6px rgba(0,0,0,0.6);
 }
 
+/* Added spacing below Experience section */
+#experience {
+  margin-bottom: 60px;
+}
+
 footer {
   background: #1a1a1a;
   color: white;
