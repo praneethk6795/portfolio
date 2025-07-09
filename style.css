@@ -27,7 +27,7 @@ section {
 .gradient-header {
   font-size: 2rem;
   margin-bottom: 25px;
-  background: linear-gradient(135deg, #03a9f4, #03a9f4, #ff9800, #f50057);
+  background: linear-gradient(135deg, #FFB74D, #FFB74D, #ff9800, #f50057);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -41,7 +41,7 @@ section {
   display: block;
   margin: 0 auto 20px auto;
   object-fit: cover;
-  border: 3px solid #03a9f4;
+  border: 3px solid #FFB74D;
 }
 
 .profile-photo.large {
@@ -106,7 +106,7 @@ a:hover {
 
 .nav-links li a {
   text-decoration: none;
-  color: #03a9f4;
+  color: #FFB74D;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -117,7 +117,7 @@ a:hover {
 
 /* ✖ Close button inside menu */
 .close-btn {
-  color: #03a9f4;
+  color: #FFB74D;
   font-size: 1.6rem;
   font-weight: bold;
   cursor: pointer;
@@ -153,7 +153,7 @@ a:hover {
   }
 
   .nav-links li a {
-    color: #03a9f4;
+    color: #FFB74D;
     font-size: 1.2rem;
   }
 }
@@ -165,7 +165,7 @@ a:hover {
   right: 30px;
   width: 60px;
   height: 60px;
-  background: #03a9f4;
+  background: #FFB74D;
   color: #121212;
   font-size: 22px;
   font-weight: bold;
@@ -299,7 +299,7 @@ a:hover {
 
 .experience-card h3 {
   font-weight: 700;
-  color: #03a9f4;
+  color: #FFB74D;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -405,7 +405,7 @@ footer {
 }
 
 .primary-btn {
-  background: #03a9f4;
+  background: #FFB74D;
   color: #121212;
   box-shadow: 0 4px 12px rgba(3, 169, 244, 0.5);
 }
@@ -417,13 +417,13 @@ footer {
 
 .secondary-btn {
   background: transparent;
-  border: 2px solid #03a9f4;
-  color: #03a9f4;
+  border: 2px solid #FFB74D;
+  color: #FFB74D;
   box-shadow: none;
 }
 
 .secondary-btn:hover {
-  background: #03a9f4;
+  background: #FFB74D;
   color: #121212;
   box-shadow: 0 4px 12px rgba(3, 169, 244, 0.5);
 }
@@ -445,7 +445,7 @@ footer {
 .indicator strong {
   display: block;
   font-size: 1.8rem;
-  color: #03a9f4;
+  color: #FFB74D;
   margin-bottom: 6px;
   font-weight: 700;
 }
