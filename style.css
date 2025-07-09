@@ -6,45 +6,58 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #121212;
+  background-color: #0d0d0d;
   color: #e0e0e0;
+  overflow-x: hidden;
 }
 
-header, section {
+header,
+section {
   padding: 40px 20px;
   margin: 30px auto;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.02);
   border-radius: 8px;
-  box-shadow: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   max-width: 900px;
   color: inherit;
   text-align: center;
-  text-shadow: 0 0 6px rgba(0,0,0,0.6);
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
 }
 
-/* Added spacing below Experience section */
-#experience {
-  margin-bottom: 60px;
+/* Section Header Gradient */
+.gradient-header {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, #bb86fc, #03a9f4, #ff9800, #f50057);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-shadow: none;
 }
 
-footer {
-  background: #1a1a1a;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  max-width: 900px;
-  margin: 40px auto 0 auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+/* Larger Profile Image */
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px auto;
+  object-fit: cover;
+  border: 3px solid #bb86fc;
 }
 
+.profile-photo.large {
+  width: 200px;
+  height: 200px;
+}
+
+/* Headings */
 h1 {
   font-size: 2.5rem;
 }
 
 h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
 }
 
 h3 {
@@ -67,7 +80,7 @@ ul {
 }
 
 a {
-  color: #90CAF9;
+  color: #90caf9;
   text-decoration: none;
 }
 
@@ -75,36 +88,20 @@ a:hover {
   text-decoration: underline;
 }
 
-.profile-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 20px auto;
-  object-fit: cover;
-  border: 3px solid #BB86FC;
-}
-
-/* 🌐 Top and Bottom Navigation */
-.top-nav, .bottom-nav {
+/* Navigation */
+.top-nav {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: transparent;
-  border: none;
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(10px);
   max-width: 100%;
   text-align: center;
-  padding: 10px 0;
-  margin-bottom: -20px;
+  padding: 12px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.bottom-nav {
-  position: static;
-  margin-top: 40px;
-}
-
-.top-nav ul,
-.bottom-nav ul {
+.top-nav ul {
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -113,41 +110,66 @@ a:hover {
   padding: 0;
 }
 
-.top-nav a,
-.bottom-nav a {
+.top-nav a {
   text-decoration: none;
-  color: #BB86FC;
+  color: #bb86fc;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
-.top-nav a:hover,
-.bottom-nav a:hover {
+.top-nav a:hover {
   color: #ffffff;
 }
 
-/* 🔝 Back to Top Button */
+/* Scroll to Top Button with Progress */
 #back-to-top {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: #BB86FC;
+  width: 60px;
+  height: 60px;
+  background: #bb86fc;
   color: #121212;
-  font-size: 24px;
-  padding: 10px 15px;
+  font-size: 22px;
+  font-weight: bold;
   border-radius: 50%;
   text-align: center;
   text-decoration: none;
   display: none;
   z-index: 1000;
   transition: background 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  line-height: 60px;
 }
 
 #back-to-top:hover {
-  background: #E0E0E0;
+  background: #e0e0e0;
 }
 
-/* 🌌 Particle Background Layer */
+/* SVG Progress Ring */
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+
+.progress-ring-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 4;
+}
+
+.progress-ring-progress {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 4;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.35s;
+}
+
+/* Particle Background Layer */
 #tsparticles {
   position: fixed;
   top: 0;
@@ -159,7 +181,7 @@ a:hover {
   pointer-events: none;
 }
 
-/* 🌠 Skills Section */
+/* Skills Section */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -185,7 +207,7 @@ a:hover {
   margin-bottom: 15px;
   font-size: 1.2rem;
   color: #ffffff;
-  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .skills-chips {
@@ -212,8 +234,7 @@ a:hover {
   transform: scale(1.05);
 }
 
-/* 🆕 Experience Section Styling */
-
+/* Experience Section */
 .experience-grid {
   display: flex;
   flex-direction: column;
@@ -243,7 +264,7 @@ a:hover {
 
 .experience-card h3 {
   font-weight: 700;
-  color: #BB86FC;
+  color: #bb86fc;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -274,12 +295,7 @@ a:hover {
   line-height: 1.4;
 }
 
-/* 🕶 Hide Dark Mode Toggle */
-#toggle-dark-mode {
-  display: none;
-}
-
-/* 📚 Education Section Styling */
+/* Education Section */
 .education-grid {
   display: flex;
   flex-direction: column;
@@ -309,7 +325,7 @@ a:hover {
 
 .education-card h3 {
   font-weight: 700;
-  color: #BB86FC;
+  color: #bb86fc;
   font-size: 1.3rem;
   margin-bottom: 8px;
 }
@@ -317,4 +333,21 @@ a:hover {
 .education-meta {
   font-size: 0.95rem;
   color: #ccc;
+}
+
+/* Footer */
+footer {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Hide Dark Mode Toggle (if exists) */
+#toggle-dark-mode {
+  display: none;
 }
