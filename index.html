@@ -116,82 +116,83 @@
   <!-- 🌌 Scroll + Direction Reactive Particles Script -->
   <script>
     let particlesInstance;
-    let scrollVelocity = 0;
-    let lastScrollY = window.scrollY;
-    let lastTime = performance.now();
-    let scrollDirection = "down";
+  let scrollVelocity = 0;
+  let lastScrollY = window.scrollY;
+  let lastTime = performance.now();
+  let scrollDirection = "bottom";
 
-    tsParticles.load("tsparticles", {
-      fullScreen: { enable: true, zIndex: -10 },
-      background: { color: { value: "transparent" } },
-      fpsLimit: 60,
-      interactivity: {
-        detectsOn: "canvas",
-        events: {
-          onHover: { enable: true, mode: "repulse" },
-          onClick: { enable: true, mode: "push" },
-          resize: true
-        },
-        modes: {
-          repulse: { distance: 100, duration: 0.4 },
-          push: { quantity: 4 }
-        }
+  tsParticles.load("tsparticles", {
+    fullScreen: { enable: true, zIndex: -10 },
+    background: { color: { value: "transparent" } },
+    fpsLimit: 60,
+    interactivity: {
+      detectsOn: "canvas",
+      events: {
+        onHover: { enable: true, mode: "repulse" },
+        onClick: { enable: true, mode: "push" },
+        resize: true
       },
-      particles: {
-        color: { value: ["#BB86FC", "#03A9F4", "#FF9800", "#F50057"] },
-        links: {
-          enable: true,
-          color: "#ffffff",
-          distance: 120,
-          opacity: 0.2,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 0.5,
-          direction: "bottom",
-          outModes: { default: "out" },
-          parallax: { enable: true, force: 100, smooth: 10 }
-        },
-        number: {
-          density: { enable: true, area: 800 },
-          value: 100
-        },
-        opacity: { value: 0.6 },
-        shape: { type: ["circle", "triangle", "edge"] },
-        size: { value: { min: 1, max: 3 } }
-      },
-      detectRetina: true
-    }).then(instance => {
-      particlesInstance = instance;
-    });
-
-    function animateParticleSpeedAndDirection() {
-      const currentY = window.scrollY;
-      const currentTime = performance.now();
-      const deltaY = currentY - lastScrollY;
-      const deltaTime = (currentTime - lastTime) / 1000;
-
-      const speed = deltaTime > 0 ? Math.abs(deltaY) / deltaTime : 0;
-      scrollVelocity = speed;
-      const adjustedSpeed = Math.min(4, 0.5 + scrollVelocity / 300);
-
-      scrollDirection = deltaY > 0 ? "bottom" : deltaY < 0 ? "top" : scrollDirection;
-
-      if (particlesInstance) {
-        const move = particlesInstance.options.particles.move;
-        move.speed = adjustedSpeed;
-        move.direction = scrollDirection;
-        particlesInstance.refresh();
+      modes: {
+        repulse: { distance: 100, duration: 0.4 },
+        push: { quantity: 4 }
       }
+    },
+    particles: {
+      color: { value: ["#BB86FC", "#03A9F4", "#FF9800", "#F50057"] },
+      links: {
+        enable: true,
+        color: "#ffffff",
+        distance: 120,
+        opacity: 0.2,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 0.5,
+        direction: "bottom",  // default
+        outModes: { default: "out" },
+        parallax: { enable: true, force: 100, smooth: 10 }
+      },
+      number: {
+        density: { enable: true, area: 800 },
+        value: 100
+      },
+      opacity: { value: 0.6 },
+      shape: { type: ["circle", "triangle", "edge"] },
+      size: { value: { min: 1, max: 3 } }
+    },
+    detectRetina: true
+  }).then(instance => {
+    particlesInstance = instance;
+    requestAnimationFrame(animateParticleSpeedAndDirection);
+  });
 
-      lastScrollY = currentY;
-      lastTime = currentTime;
+  function animateParticleSpeedAndDirection() {
+    const currentY = window.scrollY;
+    const currentTime = performance.now();
+    const deltaY = currentY - lastScrollY;
+    const deltaTime = (currentTime - lastTime) / 1000;
 
-      requestAnimationFrame(animateParticleSpeedAndDirection);
+    const speed = deltaTime > 0 ? Math.abs(deltaY) / deltaTime : 0;
+    scrollVelocity = speed;
+    const adjustedSpeed = Math.min(4, 0.5 + scrollVelocity / 300);
+
+    scrollDirection = deltaY > 0 ? "bottom" : deltaY < 0 ? "top" : scrollDirection;
+
+    if (particlesInstance) {
+      const move = particlesInstance.options.particles.move;
+      move.speed = adjustedSpeed;
+      move.direction = scrollDirection;
+
+      // ✅ Apply changes safely without refreshing
+      particlesInstance.refresh(); // Optional but not needed every frame
     }
 
+    lastScrollY = currentY;
+    lastTime = currentTime;
+
     requestAnimationFrame(animateParticleSpeedAndDirection);
+  }
   </script>
 </body>
 </html>
