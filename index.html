@@ -7,11 +7,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header>
-  <img src="images/profile.jpg" alt="Praneeth Koduru" class="profile-photo" />
-  <h1>Hi, I'm Praneeth Koduru</h1>
-  <p>Product Manager | Scrum Master | Business Analyst</p>
-</header>
+  <button id="toggle-dark-mode" aria-label="Toggle Dark Mode">🌙</button>
+
+  <header>
+    <img src="images/profile.jpg" alt="Praneeth Koduru" class="profile-photo" />
+    <h1>Hi, I'm Praneeth Koduru</h1>
+    <p>Product Manager | Scrum Master | Business Analyst</p>
+  </header>
    
   <section id="about">
     <h2>About Me</h2>
@@ -43,5 +45,24 @@
   <footer>
     <p>© 2025 Praneeth Koduru</p>
   </footer>
+
+  <!-- DARK MODE SCRIPT -->
+  <script>
+    const toggleBtn = document.getElementById('toggle-dark-mode');
+    const body = document.body;
+
+    if(localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('dark-mode');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if(body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    });
+  </script>
 </body>
 </html>
