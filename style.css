@@ -400,3 +400,49 @@ footer {
 #toggle-dark-mode {
   display: none;
 }
+
+.intro-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.primary-btn {
+  background: #03a9f4;
+  color: #121212;
+  box-shadow: 0 4px 12px rgba(3, 169, 244, 0.5);
+}
+
+.primary-btn:hover {
+  background: #0288d1;
+  box-shadow: 0 6px 16px rgba(2, 136, 209, 0.6);
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 2px solid #03a9f4;
+  color: #03a9f4;
+  box-shadow: none;
+}
+
+.secondary-btn:hover {
+  background: #03a9f4;
+  color: #121212;
+  box-shadow: 0 4px 12px rgba(3, 169, 244, 0.5);
+}
