@@ -44,10 +44,19 @@ h2 {
 
 h3 {
   font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #bbbbbb;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 ul {
-  list-style-type: square;
+  list-style-type: disc;
   padding-left: 20px;
   text-align: left;
 }
@@ -196,6 +205,69 @@ a:hover {
 .skills-chips span:hover {
   background: rgba(255, 255, 255, 0.35);
   transform: scale(1.05);
+}
+
+/* 🆕 Experience Section Styling */
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+  padding: 0 10px;
+  justify-items: stretch;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  color: #eee;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.experience-card h3 {
+  font-weight: 700;
+  color: #BB86FC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.experience-card h3 span {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.experience-card h4 {
+  font-style: italic;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.experience-card ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #ddd;
+}
+
+.experience-card ul li {
+  margin-bottom: 8px;
+  line-height: 1.4;
 }
 
 /* 🕶 Hide Dark Mode Toggle */
