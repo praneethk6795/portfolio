@@ -7,17 +7,32 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- 🌙 Dark Mode Toggle -->
   <button id="toggle-dark-mode" aria-label="Toggle Dark Mode">🌙</button>
 
-  <header>
+  <!-- 🚀 Top Navigation Bar -->
+  <nav class="top-nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🏠 Home Section (Header) -->
+  <header id="home">
     <img src="images/profile.jpg" alt="Praneeth Koduru" class="profile-photo" />
     <h1>Hi, I'm Praneeth Koduru</h1>
     <p>Product Manager | Scrum Master | Business Analyst</p>
   </header>
-   
+
   <section id="about">
     <h2>About Me</h2>
-    <p>I'm a results-driven Product Manager and Scrum Master with a passion for building user-centered digital solutions and optimizing cross-functional team delivery. I thrive at the intersection of business, technology, and design—translating vision into actionable features, driving Agile practices, and aligning stakeholders to deliver high-impact outcomes.</p>
+    <p>
+      I'm a results-driven Product Manager and Scrum Master with a passion for building user-centered digital solutions and optimizing cross-functional team delivery. I thrive at the intersection of business, technology, and design—translating vision into actionable features, driving Agile practices, and aligning stakeholders to deliver high-impact outcomes.
+    </p>
   </section>
 
   <section id="skills">
@@ -46,22 +61,30 @@
     <p>© 2025 Praneeth Koduru</p>
   </footer>
 
-  <!-- DARK MODE SCRIPT -->
+  <!-- 🔝 Back to Top Button -->
+  <a href="#home" id="back-to-top" title="Back to top">↑</a>
+
+  <!-- 📜 Scripts -->
   <script>
+    // 🌙 Dark mode toggle
     const toggleBtn = document.getElementById('toggle-dark-mode');
     const body = document.body;
-
-    if(localStorage.getItem('darkMode') === 'enabled') {
+    if (localStorage.getItem('darkMode') === 'enabled') {
       body.classList.add('dark-mode');
     }
-
     toggleBtn.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
-      if(body.classList.contains('dark-mode')) {
+      if (body.classList.contains('dark-mode')) {
         localStorage.setItem('darkMode', 'enabled');
       } else {
         localStorage.setItem('darkMode', 'disabled');
       }
+    });
+
+    // 🔝 Show/hide back to top button
+    const backToTop = document.getElementById("back-to-top");
+    window.addEventListener("scroll", () => {
+      backToTop.style.display = window.scrollY > 300 ? "block" : "none";
     });
   </script>
 </body>
