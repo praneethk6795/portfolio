@@ -96,31 +96,12 @@ a:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.logo {
-  font-weight: bold;
-  color: #03a9f4;
-  font-size: 1.1rem;
-}
-
-.hamburger {
-  font-size: 1.8rem;
-  color: #03a9f4;
-  cursor: pointer;
-  display: none;
-}
-
 .nav-links {
   display: flex;
   gap: 25px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
@@ -301,11 +282,11 @@ a:hover {
 }
 
 .experience-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.02); /* reduced opacity for subtle background */
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
   padding: 25px 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   color: #eee;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -313,7 +294,7 @@ a:hover {
 
 .experience-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
 .experience-card h3 {
@@ -445,55 +426,6 @@ footer {
   background: #03a9f4;
   color: #121212;
   box-shadow: 0 4px 12px rgba(3, 169, 244, 0.5);
-}
-
-/* Buttons */
-.intro-buttons {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 12px 26px;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-  user-select: none;
-}
-
-/* Primary button: no neon glow, subtle shadow */
-.primary-btn {
-  background: #03a9f4;
-  color: #121212;
-  box-shadow: none;
-}
-
-.primary-btn:hover {
-  background: #0288d1;
-  box-shadow: none;
-}
-
-/* Secondary button: border and icon color consistent */
-.secondary-btn {
-  background: transparent;
-  border: 2px solid #03a9f4;
-  color: #03a9f4;
-  box-shadow: none;
-}
-
-.secondary-btn:hover {
-  background: #03a9f4;
-  color: #121212;
-  box-shadow: none;
 }
 
 /* Indicators below intro */
