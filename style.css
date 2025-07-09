@@ -11,8 +11,7 @@ body {
   overflow-x: hidden;
 }
 
-header,
-section {
+header, section {
   padding: 40px 20px;
   margin: 30px auto;
   background: rgba(255, 255, 255, 0.02);
@@ -39,7 +38,7 @@ section {
   height: 180px;
   border-radius: 50%;
   display: block;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 20px;
   object-fit: cover;
   border: 3px solid #03a9f4;
 }
@@ -49,25 +48,17 @@ section {
   height: 200px;
 }
 
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
 h3 {
   font-size: 1.3rem;
   margin-bottom: 10px;
 }
-
 h4 {
   font-size: 1.1rem;
   font-weight: normal;
-  color: #bbbbbb;
-  margin-top: 0;
-  margin-bottom: 15px;
+  color: #bbb;
+  margin: 0 0 15px;
 }
 
 ul {
@@ -80,7 +71,6 @@ a {
   color: #90caf9;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
@@ -131,10 +121,10 @@ a:hover {
 }
 
 .nav-links li a:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
-/* ✖ Close button inside menu */
+/* Close button inside menu */
 .close-btn {
   color: #03a9f4;
   font-size: 1.6rem;
@@ -143,7 +133,7 @@ a:hover {
   align-self: flex-end;
   margin-bottom: 20px;
   margin-left: auto;
-  display: block;
+  display: none; /* hide by default */
 }
 
 /* Mobile Navigation */
@@ -175,6 +165,10 @@ a:hover {
     color: #03a9f4;
     font-size: 1.2rem;
   }
+
+  .close-btn {
+    display: block; /* show only on mobile */
+  }
 }
 
 /* Scroll to Top Button */
@@ -197,7 +191,6 @@ a:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   line-height: 60px;
 }
-
 #back-to-top:hover {
   background: #e0e0e0;
 }
@@ -218,7 +211,7 @@ a:hover {
 
 .progress-ring-progress {
   fill: none;
-  stroke: #ffffff;
+  stroke: #fff;
   stroke-width: 4;
   stroke-linecap: round;
   transition: stroke-dashoffset 0.35s;
@@ -256,11 +249,10 @@ a:hover {
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-
 .skill-group h3 {
   margin-bottom: 15px;
   font-size: 1.2rem;
-  color: #ffffff;
+  color: #fff;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -293,11 +285,9 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  margin-top: 20px;
+  margin: 20px auto 0;
   padding: 0 10px;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .experience-card {
@@ -381,17 +371,17 @@ a:hover {
   height: 60px;
   object-fit: contain;
   border-radius: 8px;
-  background: white;
+  background: #fff;
 }
 
 /* Footer */
 footer {
   background: #1a1a1a;
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 20px;
   max-width: 900px;
-  margin: 40px auto 0 auto;
+  margin: 40px auto 0;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
@@ -399,52 +389,6 @@ footer {
 /* Hide Dark Mode Toggle */
 #toggle-dark-mode {
   display: none;
-}
-
-.intro-buttons {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 12px 26px;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  user-select: none;
-}
-
-.primary-btn {
-  background: #03a9f4;
-  color: #121212;
-  box-shadow: 0 4px 12px rgba(3, 169, 244, 0.5);
-}
-
-.primary-btn:hover {
-  background: #0288d1;
-  box-shadow: 0 6px 16px rgba(2, 136, 209, 0.6);
-}
-
-.secondary-btn {
-  background: transparent;
-  border: 2px solid #03a9f4;
-  color: #03a9f4;
-  box-shadow: none;
-}
-
-.secondary-btn:hover {
-  background: #03a9f4;
-  color: #121212;
-  box-shadow: 0 4px 12px rgba(3, 169, 244, 0.5);
 }
 
 /* Buttons */
@@ -470,7 +414,6 @@ footer {
   user-select: none;
 }
 
-/* Primary button: no neon glow, subtle shadow */
 .primary-btn {
   background: #03a9f4;
   color: #121212;
@@ -482,7 +425,6 @@ footer {
   box-shadow: none;
 }
 
-/* Secondary button: border and icon color consistent */
 .secondary-btn {
   background: transparent;
   border: 2px solid #03a9f4;
@@ -503,7 +445,7 @@ footer {
   justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
-  color: #bbbbbb;
+  color: #bbb;
   font-weight: 500;
   font-size: 1.1rem;
   user-select: none;
@@ -516,16 +458,4 @@ footer {
   color: #03a9f4;
   margin-bottom: 6px;
   font-weight: 700;
-}
-
-/* Hide close button by default */
-.close-btn {
-  display: none;
-}
-
-/* Show close button only on mobile */
-@media (max-width: 768px) {
-  .close-btn {
-    display: block;
-  }
 }
