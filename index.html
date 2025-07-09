@@ -1,43 +1,170 @@
-<!-- Only showing changed and important sections. Keep the rest of your HTML as-is. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Praneeth Koduru | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+</head>
+<body class="dark-mode">
+  <div id="tsparticles"></div>
 
-<!-- In <header id="home"> -->
-<p>Product Manager | Scrum Master | Business Analyst | Technical Product Owner</p>
+  <!-- 🌐 Top Navigation -->
+  <nav class="top-nav transparent-nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<!-- Removed bottom nav -->
-<!-- DELETE the entire <nav class="bottom-nav"> ... </nav> -->
+  <header id="home">
+    <img src="images/profile.jpg" alt="Praneeth Koduru" class="profile-photo large" />
+    <h1>Hi, I'm Praneeth Koduru</h1>
+    <p>Product Manager | Scrum Master | Business Analyst | Technical Product Owner</p>
+    <p>
+      I thrive at the crossroads of business strategy and team execution. With 6+ years across healthcare and transportation, I’ve led Agile teams, driven digital transformations, and delivered features that improved team efficiency and user satisfaction. Now, I’m focused on building intuitive, scalable products that solve real problems and create real impact. Let’s build something meaningful together.
+    </p>
+  </header>
 
-<!-- Updated back to top button -->
-<a href="#home" id="back-to-top" title="Back to top">
-  <svg viewBox="0 0 36 36" class="progress-circle">
-    <path
-      class="circle-bg"
-      d="M18 2.0845
-         a 15.9155 15.9155 0 0 1 0 31.831
-         a 15.9155 15.9155 0 0 1 0 -31.831"
-    />
-    <path
-      class="circle"
-      stroke-dasharray="100, 100"
-      d="M18 2.0845
-         a 15.9155 15.9155 0 0 1 0 31.831
-         a 15.9155 15.9155 0 0 1 0 -31.831"
-    />
-  </svg>
-  ↑
-</a>
+  <section id="about">
+    <h2 class="gradient-header">About Me</h2>
+    <p>
+      I come from humble beginnings in India, where my father instilled in me the belief that education is the key that sets us apart. During my undergraduate studies, I set my sights on pursuing a master’s degree abroad—not just for academic growth, but to gain invaluable exposure to new cultures and perspectives.
+    </p>
+    <p>
+      Learning is a lifelong journey. My family of graduates inspires me to grow continuously and give back. I aim to build user-centered digital solutions that align business strategy with real user needs.
+    </p>
+  </section>
 
-<!-- Add this just before </body> -->
-<script>
-  const topButton = document.getElementById("back-to-top");
-  const circle = document.querySelector(".circle");
+  <section id="experience">
+    <h2 class="gradient-header">Experience</h2>
+    <!-- (All experience cards remain unchanged) -->
+    <!-- Include all your experience cards here exactly as they were -->
+  </section>
 
-  window.addEventListener("scroll", () => {
-    const scrollTop = document.documentElement.scrollTop;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / docHeight) * 100;
-    const dashArray = `${scrollPercent}, 100`;
-    circle.setAttribute("stroke-dasharray", dashArray);
+  <section id="education">
+    <h2 class="gradient-header">Education</h2>
+    <div class="experience-grid">
+      <div class="experience-card">
+        <h3>University of North Texas <span>2021 – 2023</span></h3>
+        <h4>Master of Science – Computer Engineering</h4>
+      </div>
+      <div class="experience-card">
+        <h3>Gandhi Institute of Technology <span>2013 – 2017</span></h3>
+        <h4>Bachelor of Technology – Electronics & Communication Engineering</h4>
+      </div>
+    </div>
+  </section>
 
-    topButton.style.display = scrollTop > 100 ? "block" : "none";
-  });
-</script>
+  <section id="certifications">
+    <h2 class="gradient-header">Certifications</h2>
+    <ul>
+      <li>Certified Scrum Master (CSM)</li>
+      <li>SAFe 6 Certified Scrum Master</li>
+      <li>HIPAA for Professionals</li>
+      <li>Power BI Data Analyst Associate</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2 class="gradient-header">Skills</h2>
+    <!-- (Skills layout remains unchanged) -->
+  </section>
+
+  <section id="projects">
+    <h2 class="gradient-header">Projects</h2>
+    <p>Coming soon!</p>
+  </section>
+
+  <section id="contact">
+    <h2 class="gradient-header">Contact Me</h2>
+    <p>Email: kodurup3066@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/praneethkoduru/" target="_blank">View Profile</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Praneeth Koduru</p>
+  </footer>
+
+  <!-- 🔝 Scroll Progress Back to Top Button -->
+  <a href="#home" id="back-to-top" title="Back to top">
+    <svg class="progress-ring" width="60" height="60">
+      <circle class="progress-ring-bg" cx="30" cy="30" r="26" />
+      <circle class="progress-ring-progress" cx="30" cy="30" r="26" />
+    </svg>
+    ↑
+  </a>
+
+  <!-- 🌌 Particle Background Script -->
+  <script>
+    tsParticles.load("tsparticles", {
+      fullScreen: { enable: true, zIndex: -10 },
+      background: {
+        color: "#0d0d0d"
+      },
+      fpsLimit: 60,
+      interactivity: {
+        events: {
+          onHover: { enable: true, mode: "repulse" },
+          onClick: { enable: true, mode: "push" },
+          resize: true
+        },
+        modes: {
+          repulse: { distance: 80, duration: 0.4 },
+          push: { quantity: 4 }
+        }
+      },
+      particles: {
+        color: { value: ["#BB86FC", "#03A9F4", "#FF9800", "#F50057"] },
+        links: { enable: false },
+        move: {
+          enable: true,
+          speed: 0.6,
+          direction: "none",
+          random: true,
+          straight: false,
+          outModes: { default: "out" }
+        },
+        number: {
+          value: 90,
+          density: { enable: true, area: 800 }
+        },
+        opacity: { value: 0.6 },
+        shape: { type: ["circle", "triangle", "edge"] },
+        size: { value: { min: 1, max: 3 } }
+      },
+      detectRetina: true
+    });
+  </script>
+
+  <!-- 🔁 Scroll Progress Script -->
+  <script>
+    const backToTop = document.getElementById("back-to-top");
+    const progressRing = document.querySelector(".progress-ring-progress");
+    const radius = progressRing.r.baseVal.value;
+    const circumference = 2 * Math.PI * radius;
+    progressRing.style.strokeDasharray = `${circumference} ${circumference}`;
+    progressRing.style.strokeDashoffset = circumference;
+
+    function updateProgress() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const progress = scrollTop / docHeight;
+      const offset = circumference - progress * circumference;
+      progressRing.style.strokeDashoffset = offset;
+
+      backToTop.style.display = scrollTop > 100 ? "block" : "none";
+    }
+
+    window.addEventListener("scroll", updateProgress);
+    window.addEventListener("load", updateProgress);
+  </script>
+</body>
+</html>
