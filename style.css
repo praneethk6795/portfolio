@@ -10,7 +10,7 @@ body {
   color: #333;
 }
 
-/* Make header transparent and add text shadow */
+/* Make header transparent and add text shadow + center text */
 header {
   background: transparent;
   color: white;
@@ -22,7 +22,7 @@ header {
   text-shadow: 0 0 8px rgba(0,0,0,0.7);
 }
 
-/* Make sections transparent and add subtle text shadow */
+/* Make sections transparent and add subtle text shadow + center text */
 section {
   padding: 20px;
   margin: 10px auto;
@@ -32,26 +32,30 @@ section {
   max-width: 900px;
   color: inherit;
   text-shadow: 0 0 6px rgba(0,0,0,0.6);
+  text-align: center;  /* <-- Added */
 }
 
-h1, h2 {
-  margin: 0 0 10px 0;
-}
-
-ul {
-  list-style-type: square;
-  padding-left: 20px;
-}
-
+/* Center footer text */
 footer {
   background: #222;
   color: white;
-  text-align: center;
+  text-align: center;  /* <-- Already present */
   padding: 10px;
   max-width: 900px;
   margin: 20px auto 0 auto;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+h1, h2 {
+  margin: 0 0 10px 0;
+  /* You can add text-align here if you want all headings centered globally, but header and sections are already centered */
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+  text-align: left; /* keep list left aligned inside center-aligned section */
 }
 
 .profile-photo {
@@ -134,6 +138,7 @@ body.dark-mode section {
   box-shadow: none;
   color: inherit;
   text-shadow: 0 0 6px rgba(0,0,0,0.8);
+  text-align: center;  /* <-- Added */
 }
 
 body.dark-mode footer {
