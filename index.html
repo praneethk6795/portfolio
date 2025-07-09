@@ -5,17 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Praneeth Koduru | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- 🌌 tsParticles Library -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 <body>
-  <!-- 🌌 Particle Background Container -->
   <div id="tsparticles"></div>
 
-  <!-- 🌙 Dark Mode Toggle -->
   <button id="toggle-dark-mode" aria-label="Toggle Dark Mode">🌙</button>
 
-  <!-- 🚀 Top Navigation Bar -->
   <nav class="top-nav">
     <ul>
       <li><a href="#home">Home</a></li>
@@ -26,7 +22,6 @@
     </ul>
   </nav>
 
-  <!-- 🏠 Home Section (Header) -->
   <header id="home">
     <img src="images/profile.jpg" alt="Praneeth Koduru" class="profile-photo" />
     <h1>Hi, I'm Praneeth Koduru</h1>
@@ -36,7 +31,6 @@
     </p>
   </header>
 
-  <!-- 👤 About Me -->
   <section id="about">
     <h2>About Me</h2>
     <p>
@@ -50,42 +44,87 @@
     </p>
   </section>
 
-  <!-- 💼 Skills -->
   <section id="skills">
     <h2>Skills</h2>
-    <ul>
-      <li>Product Management</li>
-      <li>Agile / Scrum / Kanban</li>
-      <li>SQL & Python (Data Analysis)</li>
-      <li>Jira, Confluence</li>
-      <li>Stakeholder Communication</li>
-    </ul>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Product Management</h3>
+        <div class="skills-chips">
+          <span>Roadmapping</span>
+          <span>User Research</span>
+          <span>A/B Testing</span>
+          <span>Personas</span>
+          <span>Journey Mapping</span>
+          <span>Feature Prioritization</span>
+          <span>Analytics</span>
+          <span>PRDs</span>
+          <span>Lifecycle Management</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Technical</h3>
+        <div class="skills-chips">
+          <span>SQL</span>
+          <span>Python</span>
+          <span>Azure Data Factory</span>
+          <span>AWS Glue</span>
+          <span>Databricks</span>
+          <span>Power BI</span>
+          <span>Tableau</span>
+          <span>Excel</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Business & Process</h3>
+        <div class="skills-chips">
+          <span>KPI Development</span>
+          <span>Process Improvement</span>
+          <span>Risk Management</span>
+          <span>Strategic Communication</span>
+          <span>Stakeholder Engagement</span>
+          <span>Agile / Scrum / Kanban</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Tools & Platforms</h3>
+        <div class="skills-chips">
+          <span>JIRA</span>
+          <span>Confluence</span>
+          <span>Figma</span>
+          <span>Smartsheet</span>
+          <span>Git</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Domain Expertise</h3>
+        <div class="skills-chips">
+          <span>Healthcare Analytics</span>
+          <span>Transportation</span>
+          <span>Regulatory Compliance</span>
+          <span>HIPAA</span>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- 📂 Projects -->
   <section id="projects">
     <h2>Projects</h2>
     <p>Coming soon!</p>
   </section>
 
-  <!-- 📫 Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
     <p>Email: kodurup3066@gmail.com</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/praneethkoduru/">View Profile</a></p>
   </section>
 
-  <!-- 📜 Footer -->
   <footer>
     <p>© 2025 Praneeth Koduru</p>
   </footer>
 
-  <!-- 🔝 Back to Top Button -->
   <a href="#home" id="back-to-top" title="Back to top">↑</a>
 
-  <!-- 🧠 Scripts -->
   <script>
-    // 🌙 Dark mode toggle
     const toggleBtn = document.getElementById('toggle-dark-mode');
     const body = document.body;
     if (localStorage.getItem('darkMode') === 'enabled') {
@@ -93,42 +132,22 @@
     }
     toggleBtn.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
-      if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('darkMode', 'enabled');
-      } else {
-        localStorage.setItem('darkMode', 'disabled');
-      }
+      localStorage.setItem('darkMode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
     });
 
-    // 🔝 Show/hide back to top button
     const backToTop = document.getElementById("back-to-top");
     window.addEventListener("scroll", () => {
       backToTop.style.display = window.scrollY > 300 ? "block" : "none";
     });
 
-    // 🌌 tsParticles config
     tsParticles.load("tsparticles", {
-      background: {
-        color: { value: "transparent" }
-      },
+      background: { color: { value: "transparent" } },
       fpsLimit: 60,
-      interactivity: {
-        events: { resize: true }
-      },
+      interactivity: { events: { resize: true } },
       particles: {
         color: { value: "#ffffff" },
-        move: {
-          direction: "none",
-          enable: true,
-          outModes: { default: "bounce" },
-          random: true,
-          speed: 0.5,
-          straight: false
-        },
-        number: {
-          density: { enable: true, area: 800 },
-          value: 80
-        },
+        move: { direction: "none", enable: true, outModes: { default: "bounce" }, random: true, speed: 0.5, straight: false },
+        number: { density: { enable: true, area: 800 }, value: 80 },
         opacity: { value: 0.5 },
         shape: { type: "circle" },
         size: { value: { min: 1, max: 3 } }
