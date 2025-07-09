@@ -33,23 +33,6 @@ header, section {
   text-shadow: none;
 }
 
-/* ✅ Newly added styles */
-.gradient-title {
-  font-size: 2.6rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, #ff6ec4, #7873f5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 0.4em;
-}
-
-.gradient-subtitle {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #c0c0c0;
-  margin-bottom: 1em;
-}
-
 .profile-photo {
   width: 180px;
   height: 180px;
@@ -208,7 +191,6 @@ a:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   line-height: 60px;
 }
-
 #back-to-top:hover {
   background: #e0e0e0;
 }
