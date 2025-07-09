@@ -273,3 +273,43 @@ a:hover {
 #toggle-dark-mode {
   display: none;
 }
+
+/* 📚 Education Section Styling */
+.education-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 20px;
+  padding: 0 10px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.education-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  color: #eee;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.education-card h3 {
+  font-weight: 700;
+  color: #BB86FC;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.education-meta {
+  font-size: 0.95rem;
+  color: #ccc;
+}
