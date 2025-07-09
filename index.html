@@ -1,47 +1,153 @@
-/* Gradient for Hi, I'm Praneeth Koduru */
-.intro-name {
-  font-size: 3rem; /* Bigger than h1 if needed */
-  font-weight: 900;
-  background: linear-gradient(135deg, #03a9f4, #7b1fa2); /* Blue to Purple */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  margin-bottom: 10px;
-  text-shadow: none; /* no glow */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praneeth Koduru | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <div class="nav-container">
+      <div class="logo">Praneeth Koduru</div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="close-btn" id="close-btn">&times;</li>
+      </ul>
+    </div>
+  </nav>
 
-/* Titles below intro-name */
-.intro-titles {
-  font-size: 1.5rem; /* smaller than intro-name but bigger than body */
-  font-weight: 600;
-  color: #90caf9; /* lighter blue */
-  margin-bottom: 20px;
-  letter-spacing: 0.03em;
-  text-align: center;
-}
+  <!-- Hero Section -->
+  <header>
+    <img src="profile.jpg" alt="Praneeth Koduru" class="profile-photo large" />
+    <h1 class="intro-name">Hi, I'm Praneeth Koduru</h1>
+    <div class="intro-titles">
+      <span>Web Developer</span>
+      <span>UI/UX Designer</span>
+      <span>Tech Enthusiast</span>
+    </div>
+    <div class="intro-buttons">
+      <a href="#projects" class="btn primary-btn">View My Work</a>
+      <a href="#contact" class="btn secondary-btn">Contact Me</a>
+    </div>
+    <div class="indicators">
+      <div class="indicator">
+        <strong>5+</strong>
+        Projects
+      </div>
+      <div class="indicator">
+        <strong>3</strong>
+        Certifications
+      </div>
+      <div class="indicator">
+        <strong>2</strong>
+        Years Experience
+      </div>
+    </div>
+  </header>
 
-.intro-titles span {
-  display: inline-block;
-  margin: 0 8px;
-  font-weight: 700;
-  background: linear-gradient(135deg, #7b1fa2, #f50057); /* purple to pink gradient */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  cursor: default;
-  user-select: none;
-}
+  <!-- About Section -->
+  <section id="about">
+    <h2 class="gradient-header">About Me</h2>
+    <p>
+      I'm a passionate web developer with experience in creating dynamic and responsive websites. I enjoy turning complex problems into simple, beautiful, and intuitive designs.
+    </p>
+  </section>
 
-/* Remove glow effect from 'View my work' link */
-.view-work {
-  text-shadow: none !important;
-  color: #03a9f4;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-  text-decoration: none;
-}
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2 class="gradient-header">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Frontend</h3>
+        <div class="skills-chips">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>React</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Backend</h3>
+        <div class="skills-chips">
+          <span>Node.js</span>
+          <span>Express</span>
+          <span>MongoDB</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Tools</h3>
+        <div class="skills-chips">
+          <span>Git</span>
+          <span>Webpack</span>
+          <span>Figma</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-.view-work:hover {
-  color: #0288d1;
-  text-decoration: underline;
-}
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2 class="gradient-header">Experience</h2>
+    <div class="experience-grid">
+      <div class="experience-card">
+        <h3>Web Developer <span>Jan 2023 - Present</span></h3>
+        <h4>XYZ Company</h4>
+        <ul>
+          <li>Developed responsive web applications using React and Node.js.</li>
+          <li>Collaborated with designers to implement UI/UX designs.</li>
+          <li>Optimized applications for maximum speed and scalability.</li>
+        </ul>
+      </div>
+      <!-- Add more experience cards as needed -->
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications">
+    <h2 class="gradient-header">Certifications</h2>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <img src="cert1.png" alt="Certification 1" />
+        <div>
+          <h3>Full Stack Web Development</h3>
+          <p>Issued by ABC Institute</p>
+        </div>
+      </div>
+      <!-- Add more certification cards as needed -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 class="gradient-header">Contact Me</h2>
+    <p>
+      Feel free to reach out to me via email at <a href="mailto:praneeth@example.com">praneeth@example.com</a> or connect with me on <a href="https://linkedin.com/in/praneethkoduru">LinkedIn</a>.
+    </p>
+  </section>
+
+  <!-- Back to Top Button -->
+  <a href="#" id="back-to-top">&#8679;</a>
+
+  <!-- JavaScript for Mobile Navigation -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    const closeBtn = document.getElementById('close-btn');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.add('show');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+    });
+  </script>
+</body>
+</html>
