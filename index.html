@@ -7,15 +7,17 @@
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
-<body>
+<body class="dark-mode">
   <div id="tsparticles"></div>
 
-  <button id="toggle-dark-mode" aria-label="Toggle Dark Mode">🌙</button>
-
-  <nav class="top-nav">
+  <!-- 🧭 Top Navigation (Transparent) -->
+  <nav class="top-nav transparent-nav">
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -34,14 +36,36 @@
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I come from humble beginnings in India, where my father instilled in me the belief that education is the key that sets us apart. When I was young, I didn’t fully grasp this wisdom, but over time, my passion for learning and self-improvement grew stronger. During my undergraduate studies, I set my sights on pursuing a master’s degree abroad—not just for academic growth, but to gain invaluable exposure to new cultures and perspectives.
+      I come from humble beginnings in India, where my father instilled in me the belief that education is the key that sets us apart. During my undergraduate studies, I set my sights on pursuing a master’s degree abroad—not just for academic growth, but to gain invaluable exposure to new cultures and perspectives.
     </p>
     <p>
-      Learning is a lifelong journey that continues to fuel my curiosity and drive. Education runs deep in my family: my parents and younger sister all hold graduate degrees, and their dedication inspires me daily. My goal is to keep evolving through knowledge and experiences, and to give back by empowering others along the way.
+      Learning is a lifelong journey. My family of graduates inspires me to grow continuously and give back. I aim to build user-centered digital solutions that align business strategy with real user needs.
     </p>
-    <p>
-      Professionally, I thrive at the intersection of business strategy, technology, and user experience. With a background in product management, scrum mastery, and business analysis, I’m passionate about building user-centered digital solutions that solve real problems. I excel in collaborating with cross-functional teams to deliver impactful products that align with strategic goals and enrich user experiences.
-    </p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p><strong>Product Manager – Wabtec Corporation</strong><br>
+    Led 3 Agile teams across 8+ features (150+ user stories); improved efficiency and reduced delivery cycle by 25%.</p>
+
+    <p><strong>Business Analyst – Optum</strong><br>
+    Managed requirements for IAM solutions and RBAC across enterprise; collaborated with cross-functional teams in Agile sprints.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>MS in Business Analytics – University of Texas at Dallas</strong><br>2020 – 2022</p>
+    <p><strong>Bachelor of Technology – Computer Science</strong><br>2014 – 2018</p>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Certified Scrum Master (CSM)</li>
+      <li>SAFe 6 Certified Scrum Master</li>
+      <li>HIPAA for Professionals</li>
+      <li>Power BI Data Analyst Associate</li>
+    </ul>
   </section>
 
   <section id="skills">
@@ -50,58 +74,34 @@
       <div class="skill-group">
         <h3>Product Management</h3>
         <div class="skills-chips">
-          <span>Roadmapping</span>
-          <span>User Research</span>
-          <span>A/B Testing</span>
-          <span>Personas</span>
-          <span>Journey Mapping</span>
-          <span>Feature Prioritization</span>
-          <span>Analytics</span>
-          <span>PRDs</span>
-          <span>Lifecycle Management</span>
+          <span>Roadmapping</span><span>User Research</span><span>A/B Testing</span><span>Personas</span>
+          <span>Journey Mapping</span><span>Feature Prioritization</span><span>Analytics</span><span>PRDs</span><span>Lifecycle Management</span>
         </div>
       </div>
       <div class="skill-group">
         <h3>Technical</h3>
         <div class="skills-chips">
-          <span>SQL</span>
-          <span>Python</span>
-          <span>Azure Data Factory</span>
-          <span>AWS Glue</span>
-          <span>Databricks</span>
-          <span>Power BI</span>
-          <span>Tableau</span>
-          <span>Excel</span>
+          <span>SQL</span><span>Python</span><span>Azure Data Factory</span><span>AWS Glue</span>
+          <span>Databricks</span><span>Power BI</span><span>Tableau</span><span>Excel</span>
         </div>
       </div>
       <div class="skill-group">
         <h3>Business & Process</h3>
         <div class="skills-chips">
-          <span>KPI Development</span>
-          <span>Process Improvement</span>
-          <span>Risk Management</span>
-          <span>Strategic Communication</span>
-          <span>Stakeholder Engagement</span>
-          <span>Agile / Scrum / Kanban</span>
+          <span>KPI Development</span><span>Process Improvement</span><span>Risk Management</span>
+          <span>Strategic Communication</span><span>Stakeholder Engagement</span><span>Agile / Scrum / Kanban</span>
         </div>
       </div>
       <div class="skill-group">
         <h3>Tools & Platforms</h3>
         <div class="skills-chips">
-          <span>JIRA</span>
-          <span>Confluence</span>
-          <span>Figma</span>
-          <span>Smartsheet</span>
-          <span>Git</span>
+          <span>JIRA</span><span>Confluence</span><span>Figma</span><span>Smartsheet</span><span>Git</span>
         </div>
       </div>
       <div class="skill-group">
         <h3>Domain Expertise</h3>
         <div class="skills-chips">
-          <span>Healthcare Analytics</span>
-          <span>Transportation</span>
-          <span>Regulatory Compliance</span>
-          <span>HIPAA</span>
+          <span>Healthcare Analytics</span><span>Transportation</span><span>Regulatory Compliance</span><span>HIPAA</span>
         </div>
       </div>
     </div>
@@ -115,8 +115,22 @@
   <section id="contact">
     <h2>Contact Me</h2>
     <p>Email: kodurup3066@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/praneethkoduru/">View Profile</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/praneethkoduru/" target="_blank">View Profile</a></p>
   </section>
+
+  <!-- 🔽 Bottom Navigation -->
+  <nav class="bottom-nav transparent-nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
   <footer>
     <p>© 2025 Praneeth Koduru</p>
@@ -125,30 +139,25 @@
   <a href="#home" id="back-to-top" title="Back to top">↑</a>
 
   <script>
-    const toggleBtn = document.getElementById('toggle-dark-mode');
-    const body = document.body;
-    if (localStorage.getItem('darkMode') === 'enabled') {
-      body.classList.add('dark-mode');
-    }
-    toggleBtn.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      localStorage.setItem('darkMode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
-    });
-
-    const backToTop = document.getElementById("back-to-top");
-    window.addEventListener("scroll", () => {
-      backToTop.style.display = window.scrollY > 300 ? "block" : "none";
-    });
-
     tsParticles.load("tsparticles", {
       background: { color: { value: "transparent" } },
       fpsLimit: 60,
       interactivity: { events: { resize: true } },
       particles: {
-        color: { value: "#ffffff" },
-        move: { direction: "none", enable: true, outModes: { default: "bounce" }, random: true, speed: 0.5, straight: false },
-        number: { density: { enable: true, area: 800 }, value: 80 },
-        opacity: { value: 0.5 },
+        color: { value: ["#00bcd4", "#f50057", "#03a9f4", "#ff9800"] },
+        move: {
+          direction: "none",
+          enable: true,
+          outModes: { default: "bounce" },
+          random: true,
+          speed: 0.7,
+          straight: false
+        },
+        number: {
+          density: { enable: true, area: 800 },
+          value: 100
+        },
+        opacity: { value: 0.6 },
         shape: { type: "circle" },
         size: { value: { min: 1, max: 3 } }
       },
