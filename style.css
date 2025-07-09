@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -47,7 +51,58 @@ footer {
   border: 3px solid #004080;
 }
 
-/* 🔘 DARK MODE STYLES */
+/* 🌐 Top Navigation Bar */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+}
+
+.top-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #004080;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.top-nav a:hover {
+  color: #0077cc;
+}
+
+/* 🔝 Back to Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #004080;
+  color: white;
+  font-size: 24px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  display: none;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+#back-to-top:hover {
+  background: #0077cc;
+}
+
+/* 🔘 Dark Mode Styles */
 body.dark-mode {
   background-color: #121212;
   color: #e0e0e0;
@@ -72,7 +127,25 @@ body.dark-mode a {
   color: #90CAF9;
 }
 
-/* 🌙 TOGGLE BUTTON STYLE */
+body.dark-mode .top-nav {
+  background-color: #1a1a1a;
+  border-color: #333;
+}
+
+body.dark-mode .top-nav a {
+  color: #BB86FC;
+}
+
+body.dark-mode #back-to-top {
+  background: #BB86FC;
+  color: #121212;
+}
+
+body.dark-mode #back-to-top:hover {
+  background: #E0E0E0;
+}
+
+/* 🌙 Toggle Button */
 #toggle-dark-mode {
   position: fixed;
   top: 20px;
