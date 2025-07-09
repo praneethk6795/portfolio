@@ -461,3 +461,11 @@ footer {
     display: block;
   }
 }
+
+.gradient-text {
+  background: linear-gradient(135deg, #03a9f4, #ff9800, #f50057);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 700;
+}
