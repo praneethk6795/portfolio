@@ -28,7 +28,7 @@ section {
 .gradient-header {
   font-size: 2rem;
   margin-bottom: 25px;
-  background: linear-gradient(135deg, #bb86fc, #03a9f4, #ff9800, #f50057);
+  background: linear-gradient(135deg, #00bcd4, #03a9f4, #ff9800, #f50057);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -43,7 +43,7 @@ section {
   display: block;
   margin: 0 auto 20px auto;
   object-fit: cover;
-  border: 3px solid #bb86fc;
+  border: 3px solid #00bcd4;
 }
 
 .profile-photo.large {
@@ -112,7 +112,7 @@ a:hover {
 
 .top-nav a {
   text-decoration: none;
-  color: #bb86fc;
+  color: #00bcd4;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -128,7 +128,7 @@ a:hover {
   right: 30px;
   width: 60px;
   height: 60px;
-  background: #bb86fc;
+  background: #00bcd4;
   color: #121212;
   font-size: 22px;
   font-weight: bold;
@@ -264,7 +264,7 @@ a:hover {
 
 .experience-card h3 {
   font-weight: 700;
-  color: #bb86fc;
+  color: #00bcd4;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -325,7 +325,7 @@ a:hover {
 
 .education-card h3 {
   font-weight: 700;
-  color: #bb86fc;
+  color: #00bcd4;
   font-size: 1.3rem;
   margin-bottom: 8px;
 }
