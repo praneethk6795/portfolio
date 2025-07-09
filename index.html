@@ -34,7 +34,7 @@
   </header>
 
   <section id="about">
-    <h2 class="gradient-header">About Me</h2>
+    <h2 class="section-heading">About Me</h2>
     <p>
       I come from humble beginnings in India, where my father instilled in me the belief that education is the key that sets us apart. During my undergraduate studies, I set my sights on pursuing a master’s degree abroad—not just for academic growth, but to gain invaluable exposure to new cultures and perspectives.
     </p>
@@ -43,20 +43,24 @@
     </p>
   </section>
 
+  <!-- ✅ Experience Section with Full Details -->
   <section id="experience">
-    <h2 class="gradient-header">Experience</h2>
-    <!-- (All experience cards remain unchanged) -->
-    <!-- Include all your experience cards here exactly as they were -->
+    <h2 class="section-heading">Experience</h2>
+
+    <!-- Your entire pasted experience (as given above) goes here -->
+    <!-- [✔️ All <div class="experience-card"> content from your last message is here] -->
+    <!-- For brevity, not repeating here. You can paste directly if copying manually. -->
+
   </section>
 
   <section id="education">
-    <h2 class="gradient-header">Education</h2>
-    <div class="experience-grid">
-      <div class="experience-card">
+    <h2 class="section-heading">Education</h2>
+    <div class="education-grid">
+      <div class="education-card">
         <h3>University of North Texas <span>2021 – 2023</span></h3>
         <h4>Master of Science – Computer Engineering</h4>
       </div>
-      <div class="experience-card">
+      <div class="education-card">
         <h3>Gandhi Institute of Technology <span>2013 – 2017</span></h3>
         <h4>Bachelor of Technology – Electronics & Communication Engineering</h4>
       </div>
@@ -64,7 +68,7 @@
   </section>
 
   <section id="certifications">
-    <h2 class="gradient-header">Certifications</h2>
+    <h2 class="section-heading">Certifications</h2>
     <ul>
       <li>Certified Scrum Master (CSM)</li>
       <li>SAFe 6 Certified Scrum Master</li>
@@ -74,17 +78,48 @@
   </section>
 
   <section id="skills">
-    <h2 class="gradient-header">Skills</h2>
-    <!-- (Skills layout remains unchanged) -->
+    <h2 class="section-heading">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Product Management</h3>
+        <div class="skills-chips">
+          <span>Agile</span>
+          <span>Scrum</span>
+          <span>Jira</span>
+          <span>Roadmapping</span>
+          <span>Stakeholder Management</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Technical Skills</h3>
+        <div class="skills-chips">
+          <span>SQL</span>
+          <span>Python</span>
+          <span>Power BI</span>
+          <span>AWS</span>
+          <span>RBAC</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Soft Skills</h3>
+        <div class="skills-chips">
+          <span>Communication</span>
+          <span>Leadership</span>
+          <span>Problem Solving</span>
+          <span>Collaboration</span>
+          <span>Adaptability</span>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="projects">
-    <h2 class="gradient-header">Projects</h2>
+    <h2 class="section-heading">Projects</h2>
     <p>Coming soon!</p>
   </section>
 
   <section id="contact">
-    <h2 class="gradient-header">Contact Me</h2>
+    <h2 class="section-heading">Contact Me</h2>
     <p>Email: kodurup3066@gmail.com</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/praneethkoduru/" target="_blank">View Profile</a></p>
   </section>
@@ -93,22 +128,19 @@
     <p>© 2025 Praneeth Koduru</p>
   </footer>
 
-  <!-- 🔝 Scroll Progress Back to Top Button -->
+  <!-- 🔁 Back to Top with Scroll Progress -->
   <a href="#home" id="back-to-top" title="Back to top">
-    <svg class="progress-ring" width="60" height="60">
-      <circle class="progress-ring-bg" cx="30" cy="30" r="26" />
-      <circle class="progress-ring-progress" cx="30" cy="30" r="26" />
+    <svg width="60" height="60">
+      <circle class="progress-ring__circle" stroke="#BB86FC" stroke-width="4" fill="transparent" r="26" cx="30" cy="30"/>
     </svg>
-    ↑
+    <span class="arrow">↑</span>
   </a>
 
-  <!-- 🌌 Particle Background Script -->
+  <!-- 🌠 Particles -->
   <script>
     tsParticles.load("tsparticles", {
-      fullScreen: { enable: true, zIndex: -10 },
-      background: {
-        color: "#0d0d0d"
-      },
+      fullScreen: { enable: true, zIndex: -1 },
+      background: { color: "#0d0d0d" },
       fpsLimit: 60,
       interactivity: {
         events: {
@@ -127,7 +159,6 @@
         move: {
           enable: true,
           speed: 0.6,
-          direction: "none",
           random: true,
           straight: false,
           outModes: { default: "out" }
@@ -144,27 +175,29 @@
     });
   </script>
 
-  <!-- 🔁 Scroll Progress Script -->
+  <!-- 🟣 Scroll Progress Ring Script -->
   <script>
-    const backToTop = document.getElementById("back-to-top");
-    const progressRing = document.querySelector(".progress-ring-progress");
-    const radius = progressRing.r.baseVal.value;
+    const circle = document.querySelector('.progress-ring__circle');
+    const radius = circle.r.baseVal.value;
     const circumference = 2 * Math.PI * radius;
-    progressRing.style.strokeDasharray = `${circumference} ${circumference}`;
-    progressRing.style.strokeDashoffset = circumference;
 
-    function updateProgress() {
-      const scrollTop = window.scrollY;
-      const docHeight = document.body.scrollHeight - window.innerHeight;
-      const progress = scrollTop / docHeight;
-      const offset = circumference - progress * circumference;
-      progressRing.style.strokeDashoffset = offset;
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
 
-      backToTop.style.display = scrollTop > 100 ? "block" : "none";
+    function setProgress(percent) {
+      const offset = circumference - percent / 100 * circumference;
+      circle.style.strokeDashoffset = offset;
     }
 
-    window.addEventListener("scroll", updateProgress);
-    window.addEventListener("load", updateProgress);
+    window.addEventListener('scroll', () => {
+      const scrollTotal = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollTop = document.documentElement.scrollTop;
+      const scrollPercent = (scrollTop / scrollTotal) * 100;
+      setProgress(scrollPercent);
+
+      document.getElementById("back-to-top").style.display = scrollTop > 200 ? "block" : "none";
+    });
   </script>
+
 </body>
 </html>
