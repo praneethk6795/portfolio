@@ -175,3 +175,15 @@ body.dark-mode #toggle-dark-mode:hover {
   background-color: #BB86FC;
   color: #121212;
 }
+
+/* 🌌 Particle Background Layer */
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  background: transparent;
+  pointer-events: none;
+}
