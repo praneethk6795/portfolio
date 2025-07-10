@@ -530,3 +530,11 @@ footer {
   font-size: 0.95rem;
   line-height: 1.4;
 }
+
+.skill-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+  filter: invert(90%) brightness(150%);
+}
