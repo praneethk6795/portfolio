@@ -460,6 +460,28 @@
   window.addEventListener("load", calculateAccurateExperience);
 </script>
 
+<script>
+  function updateNavMode() {
+    const navWrapper = document.querySelector(".nav-wrapper");
+    const navLinks = document.querySelector(".nav-links");
+    const hamburger = document.getElementById("hamburger");
+
+    // Temporarily reset to measure
+    navLinks.classList.remove("mobile-mode", "show");
+    hamburger.style.display = "none";
+
+    const navWidth = navLinks.scrollWidth;
+    const wrapperWidth = navWrapper.clientWidth;
+
+    if (navWidth > wrapperWidth) {
+      navLinks.classList.add("mobile-mode");
+      hamburger.style.display = "block";
+    }
+  }
+
+  window.addEventListener("resize", updateNavMode);
+  window.addEventListener("load", updateNavMode);
+</script>
 
 
 </body>
