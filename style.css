@@ -110,14 +110,20 @@ section {
   color: #ffffff;
 }
 
-/* Mobile Nav */
-@media (max-width: 768px) {
-  .hamburger {
+  @media (max-width: 1024px) {
+  .top-nav ul {
     display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: #03a9f4;
-  z-index: 2000;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #03a9f4;
+    z-index: 2000;
+    position: absolute;
+    top: 16px;
+    right: 20px;
   }
 
   .nav-links {
@@ -126,43 +132,40 @@ section {
     position: fixed;
     top: 0;
     right: -100%;
-    background-color: #121212;
+    background-color: rgba(18, 18, 18, 0.97);
     width: 80%;
     height: 100vh;
-    padding: 60px 20px;
+    padding: 80px 30px 30px;
     gap: 25px;
     transition: right 0.4s ease;
     z-index: 1500;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.7);
+    box-shadow: -2px 0 12px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  @media (max-width: 1024px) {
-  .hamburger {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 14px;
-  }
-
-  .top-nav ul {
-    display: none;
-  }
-    
   .nav-links.show {
     right: 0;
   }
 
   .nav-links li a {
-   font-size: 1.3rem;
-    color: #03a9f4;
+    font-size: 1.2rem;
+    color: #90caf9;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+
+  .nav-links li a:hover {
+    color: #ffffff;
   }
 
   .close-btn {
     font-size: 2rem;
     font-weight: bold;
-    color: #fff;
+    color: #90caf9;
     align-self: flex-end;
     cursor: pointer;
+    margin-bottom: 20px;
   }
 }
 
