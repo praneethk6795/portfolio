@@ -316,12 +316,13 @@
 
   <!-- 🔝 Scroll Progress Back to Top Button -->
   <a href="#home" id="back-to-top" title="Back to top">
-    <svg class="progress-ring" width="60" height="60">
-      <circle class="progress-ring-bg" cx="30" cy="30" r="26" />
-      <circle class="progress-ring-progress" cx="30" cy="30" r="26" />
-    </svg>
-    ↑
-  </a>
+  <svg class="progress-ring" width="60" height="60">
+    <circle class="progress-ring-bg" cx="30" cy="30" r="26" stroke="#555" stroke-width="4" fill="none"/>
+    <circle class="progress-ring-progress" cx="30" cy="30" r="26" stroke="#03a9f4" stroke-width="4" fill="none"/>
+  </svg>
+  ↑
+</a>
+
 
   <!-- 🌌 Particle Background Script -->
   <script>
@@ -365,8 +366,10 @@
 
   <!-- 🔁 Scroll Progress Script -->
   <script>
-    const backToTop = document.getElementById("back-to-top");
-    const progressRing = document.querySelector(".progress-ring-progress");
+  const backToTop = document.getElementById("back-to-top");
+  const progressRing = document.querySelector(".progress-ring-progress");
+
+  if (progressRing) {
     const radius = progressRing.r.baseVal.value;
     const circumference = 2 * Math.PI * radius;
     progressRing.style.strokeDasharray = `${circumference} ${circumference}`;
@@ -374,17 +377,19 @@
 
     function updateProgress() {
       const scrollTop = window.scrollY;
-      const docHeight = document.body.scrollHeight - window.innerHeight;
-      const progress = scrollTop / docHeight;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = Math.min(scrollTop / docHeight, 1); // Cap at 100%
       const offset = circumference - progress * circumference;
-      progressRing.style.strokeDashoffset = offset;
 
+      progressRing.style.strokeDashoffset = offset;
       backToTop.style.display = scrollTop > 100 ? "block" : "none";
     }
 
     window.addEventListener("scroll", updateProgress);
     window.addEventListener("load", updateProgress);
-  </script>
+  }
+</script>
+
 
   <script>
   const hamburger = document.getElementById("hamburger");
