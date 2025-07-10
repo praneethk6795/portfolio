@@ -814,3 +814,22 @@ footer {
   color: #90caf9;
   font-weight: bold;
 }
+
+#contact-form button,
+.primary-btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;   /* ✅ Center text horizontally */
+  align-items: center;       /* ✅ Center text vertically */
+  gap: 8px;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background: #03a9f4;
+  color: #121212;
+  border: none;
+  text-align: center;
+}
