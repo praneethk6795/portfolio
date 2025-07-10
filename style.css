@@ -481,15 +481,9 @@ section {
   right: 30px;
   width: 60px;
   height: 60px;
-  background: transparent;
-  color: #03a9f4;
-  font-size: 24px;
   border-radius: 50%;
-  text-align: center;
-  line-height: 60px;
-  display: none;
   z-index: 1000;
-  cursor: pointer;
+  overflow: hidden;
 }
 
 .progress-ring circle {
@@ -505,8 +499,9 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 24px;
-  color: #03a9f4;
+  color: #ffffff;
   z-index: 10;
+  pointer-events: none;
 }
 
 #back-to-top:hover {
@@ -542,3 +537,42 @@ section {
 .close-btn {
   display: none; /* hide by default (desktop) */
 }
+
+@media (max-width: 768px) {
+  #back-to-top {
+    background: #121212; /* darker bg for contrast */
+  }
+
+  #back-to-top::after {
+    color: #ffffff; /* white arrow for contrast */
+  }
+}
+
+#back-to-top svg.progress-ring {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress-ring-bg,
+.progress-ring-progress {
+  fill: none;
+  stroke-width: 4;
+  r: 26;
+  cx: 30;
+  cy: 30;
+}
+
+.progress-ring-bg {
+  stroke: rgba(255, 255, 255, 0.1);
+}
+
+.progress-ring-progress {
+  stroke: #03a9f4;
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
