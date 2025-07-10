@@ -508,3 +508,25 @@ footer {
   margin-bottom: 6px;
   text-shadow: none; /* Remove glow */
 }
+
+.skills-intro {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  font-size: 1.05rem;
+  color: #bbbbbb;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.skill-group ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #ddd;
+  text-align: left;
+}
+
+.skill-group ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
