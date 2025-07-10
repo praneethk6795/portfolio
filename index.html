@@ -461,11 +461,28 @@
     </div>
   </section>
 
-  <section id="contact">
-    <h2 class="gradient-header">Contact Me</h2>
-    <p>Email: kodurup3066@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/praneethkoduru/" target="_blank">View Profile</a></p>
-  </section>
+<section id="contact">
+  <h2 class="gradient-header">Want to collaborate?</h2>
+  <p style="max-width: 600px; margin: 0 auto 30px;">
+    Feel free to reach out using the form below, and I'll get back to you as soon as I can!
+  </p>
+
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="text" name="subject" placeholder="Subject" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn primary-btn">Send Message</button>
+  </form>
+
+  <div id="form-status" style="margin-top: 15px;"></div>
+
+  <p style="margin-top: 40px;">
+    Or connect with me on<br />
+    <strong>Email:</strong> <a href="mailto:kodurup3066@gmail.com">kodurup3066@gmail.com</a><br />
+    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/praneethkoduru/" target="_blank">View Profile</a>
+  </p>
+</section>
 
   <footer>
     <p>© 2025 Praneeth Koduru</p>
@@ -645,6 +662,35 @@
   window.addEventListener("load", updateNavMode);
 </script>
 
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("CGf3NWc7gjOddVYr3"); // Replace with your actual EmailJS public key
+  })();
 
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const form = this;
+      const status = document.getElementById("form-status");
+
+      emailjs
+        .sendForm("service_nehgyqf", "template_slbqyml", form)
+        .then(
+          function () {
+            status.innerText = "✅ Message sent successfully!";
+            form.reset();
+          },
+          function (error) {
+            console.error(error);
+            status.innerText = "❌ Failed to send. Please try again later.";
+          }
+        );
+    });
+</script>
+
+  
 </body>
 </html>
