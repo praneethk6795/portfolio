@@ -483,3 +483,28 @@ footer {
   text-align: center;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
+
+.intro-stats {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  color: #ccc;
+  font-weight: 600;
+  user-select: none;
+  text-align: center;
+}
+
+.intro-stats .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-stats .stat strong {
+  font-size: 2rem;
+  color: #03a9f4;
+  margin-bottom: 6px;
+  text-shadow: 0 0 6px rgba(3, 169, 244, 0.6);
+}
