@@ -469,3 +469,13 @@ footer {
   display: inline-block;
   font-weight: 700;
 }
+
+.titles {
+  font-size: 1.5rem;   /* Bigger than paragraph (usually ~1rem), smaller than h1 (2.5rem) */
+  font-weight: 600;
+  color: #90caf9;       /* Light cyan to fit your theme */
+  margin-top: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
