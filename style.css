@@ -616,11 +616,12 @@ section {
 
 /* Match skill icon size for project image */
 .project-image {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 0.75rem;
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
   margin-bottom: 1rem;
+  display: block;
 }
 
 /* Project title same size and weight as skill titles */
