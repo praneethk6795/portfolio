@@ -221,21 +221,21 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  justify-items: center;
-  margin-top: 30px;
-  padding: 10px;
+  justify-items: stretch;
+  padding: 0 10px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .skill-group {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
-  padding: 20px;
+  padding: 20px 20px 10px;
   border-radius: 12px;
-  width: 100%;
-  max-width: 300px;
-  text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  color: #eee;
 }
 
 .skill-group h3 {
