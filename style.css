@@ -538,3 +538,40 @@ footer {
   vertical-align: middle;
   filter: invert(90%) brightness(150%);
 }
+
+/* Skill Group Title Colors */
+.skill-group:nth-child(1) .skill-title h3,
+.skill-group:nth-child(1) .skill-icon {
+  color: #00e5ff;
+  filter: brightness(1.1) drop-shadow(0 0 2px #00e5ff);
+}
+
+.skill-group:nth-child(2) .skill-title h3,
+.skill-group:nth-child(2) .skill-icon {
+  color: #ffb74d;
+  filter: brightness(1.1) drop-shadow(0 0 2px #ffb74d);
+}
+
+.skill-group:nth-child(3) .skill-title h3,
+.skill-group:nth-child(3) .skill-icon {
+  color: #ce93d8;
+  filter: brightness(1.1) drop-shadow(0 0 2px #ce93d8);
+}
+
+.skill-group:nth-child(4) .skill-title h3,
+.skill-group:nth-child(4) .skill-icon {
+  color: #69f0ae;
+  filter: brightness(1.1) drop-shadow(0 0 2px #69f0ae);
+}
+
+/* Optional: soften icon glow on dark bg */
+.skill-icon {
+  width: 28px;
+  height: 28px;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1);
+}
