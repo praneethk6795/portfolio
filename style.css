@@ -506,5 +506,5 @@ footer {
   font-size: 2rem;
   color: #03a9f4;
   margin-bottom: 6px;
-  text-shadow: 0 0 6px rgba(3, 169, 244, 0.6);
+  text-shadow: none; /* Remove glow */
 }
