@@ -498,6 +498,17 @@ section {
   transform-origin: 50% 50%;
 }
 
+#back-to-top::after {
+  content: "↑";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #03a9f4;
+  z-index: 10;
+}
+
 #back-to-top:hover {
   background: #e0e0e0;
 }
