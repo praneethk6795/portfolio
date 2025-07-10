@@ -481,17 +481,21 @@ section {
   right: 30px;
   width: 60px;
   height: 60px;
-  background: #03a9f4;
-  color: #121212;
-  font-size: 22px;
-  font-weight: bold;
+  background: transparent;
+  color: #03a9f4;
+  font-size: 24px;
   border-radius: 50%;
   text-align: center;
   line-height: 60px;
   display: none;
   z-index: 1000;
-  transition: background 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.progress-ring circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
 }
 
 #back-to-top:hover {
