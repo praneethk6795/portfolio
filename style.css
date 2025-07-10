@@ -584,12 +584,67 @@ section {
   margin-bottom: 15px;
 }
 
-.tag {
-  background-color: #1e1e1e;
-  border: 1px solid #90caf9;
-  color: #90caf9;
-  padding: 4px 10px;
-  font-size: 0.75rem;
-  border-radius: 12px;
-  font-weight: 500;
+/* Project card uses same grid/box style as skills */
+.project-card {
+  padding: 1.5rem;
+  background-color: #121212; /* Match skill group bg or transparent */
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
+
+/* Match skill icon size for project image */
+.project-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Project title same size and weight as skill titles */
+.project-title {
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-shadow: none; /* Remove glow */
+}
+
+/* Project description styling */
+.project-description {
+  font-size: 0.9rem;
+  color: #cccccc;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  max-width: 280px; /* keep width similar to skill cards */
+}
+
+/* Tags container */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Reuse your existing .tag styles, or define if not present */
+.tag {
+  background-color: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  user-select: none;
+}
+
+/* Center the button */
+.project-link {
+  margin-top: 0.5rem;
+}
+
