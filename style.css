@@ -575,3 +575,29 @@ footer {
 .skill-icon:hover {
   transform: scale(1.1);
 }
+
+.top-nav .nav-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.top-nav ul li a {
+  text-decoration: none;
+  color: #03a9f4;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.top-nav ul li a:hover {
+  color: #ffffff;
+}
