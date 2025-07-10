@@ -405,14 +405,17 @@ footer {
 }
 
 .primary-btn {
-  background: #03a9f4;
+  background: #03a9f4; /* keep the cyan background */
   color: #121212;
-  box-shadow: 0 4px 12px rgba(3, 169, 244, 0.5);
+  box-shadow: none; /* remove glow */
+  text-shadow: none; /* remove text glow if any */
+  transition: background-color 0.3s ease, color 0.3s ease; /* keep smooth hover */
 }
 
 .primary-btn:hover {
-  background: #0288d1;
-  box-shadow: 0 6px 16px rgba(2, 136, 209, 0.6);
+  background: #0288d1; /* a slightly darker cyan */
+  box-shadow: none; /* no glow on hover either */
+  text-shadow: none;
 }
 
 .secondary-btn {
@@ -468,6 +471,7 @@ footer {
   -webkit-text-fill-color: transparent;
   display: inline-block;
   font-weight: 700;
+  text-shadow: none; /* remove any glow */
 }
 
 .titles {
