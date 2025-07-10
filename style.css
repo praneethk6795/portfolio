@@ -150,9 +150,9 @@ section {
 
   .nav-links li a {
     font-size: 1.2rem;
-    color: #90caf9;
-    font-weight: bold;
-    padding: 10px 0;
+  color: #90caf9;
+  font-weight: bold;
+  padding: 10px 0 10px 10px;
   }
 
   .nav-links li a:hover {
