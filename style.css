@@ -509,3 +509,11 @@ section {
 #toggle-dark-mode {
   display: none;
 }
+
+.nav-links {
+  transition: right 0.4s ease;
+}
+
+.nav-links.show {
+  right: 0 !important;
+}
