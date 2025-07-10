@@ -620,10 +620,7 @@ section {
   height: 180px;
   object-fit: cover;
   object-position: center;
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-radius: 0.75rem; /* Rounded corners on all sides */
   display: block;
 }
 
