@@ -44,7 +44,7 @@
 
     <div class="intro-stats">
   <div class="stat">
-    <strong>6+</strong>
+    <strong id="yearsExperience">—</strong>
     <span>Years Experience</span>
   </div>
   <div class="stat">
@@ -405,5 +405,30 @@
     })
   );
 </script>
+
+  <script>
+  function calculateYearsExperience() {
+    const cards = document.querySelectorAll("#experience .experience-card h3 span");
+    let minYear = new Date().getFullYear();
+    let maxYear = 0;
+
+    cards.forEach(span => {
+      const text = span.textContent.trim();
+      const [startText, endText] = text.split("–").map(t => t.trim());
+
+      const startYear = parseInt(startText.match(/\d{4}/)?.[0], 10);
+      const endYear = endText.includes("Present") ? new Date().getFullYear() : parseInt(endText.match(/\d{4}/)?.[0], 10);
+
+      if (!isNaN(startYear)) minYear = Math.min(minYear, startYear);
+      if (!isNaN(endYear)) maxYear = Math.max(maxYear, endYear);
+    });
+
+    const experienceYears = maxYear - minYear + 1;
+    document.getElementById("yearsExperience").textContent = `${experienceYears}+`;
+  }
+
+  window.addEventListener("load", calculateYearsExperience);
+</script>
+
 </body>
 </html>
