@@ -617,10 +617,13 @@ section {
 /* Match skill icon size for project image */
 .project-image {
   width: 100%;
-  height: auto;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
-  margin-bottom: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   display: block;
 }
 
