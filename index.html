@@ -406,29 +406,57 @@
   );
 </script>
 
-  <script>
-  function calculateYearsExperience() {
-    const cards = document.querySelectorAll("#experience .experience-card h3 span");
-    let minYear = new Date().getFullYear();
-    let maxYear = 0;
+<script>
+  function calculateAccurateExperience() {
+    const spans = document.querySelectorAll("#experience .experience-card h3 span");
+    const experienceMonths = new Set();
 
-    cards.forEach(span => {
-      const text = span.textContent.trim();
+    spans.forEach(span => {
+      const text = span.textContent.trim(); // Example: "Feb 2025 – Present"
       const [startText, endText] = text.split("–").map(t => t.trim());
 
-      const startYear = parseInt(startText.match(/\d{4}/)?.[0], 10);
-      const endYear = endText.includes("Present") ? new Date().getFullYear() : parseInt(endText.match(/\d{4}/)?.[0], 10);
+      const startMatch = startText.match(/([A-Za-z]+)\s+(\d{4})/);
+      const endMatch = endText.includes("Present")
+        ? [null, new Date().getMonth(), new Date().getFullYear()]
+        : endText.match(/([A-Za-z]+)\s+(\d{4})/);
 
-      if (!isNaN(startYear)) minYear = Math.min(minYear, startYear);
-      if (!isNaN(endYear)) maxYear = Math.max(maxYear, endYear);
+      if (!startMatch) return;
+
+      const monthMap = {
+        Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+        Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11
+      };
+
+      const startMonth = monthMap[startMatch[1].substr(0, 3)];
+      const startYear = parseInt(startMatch[2]);
+
+      const endMonth = endMatch[0]
+        ? monthMap[endMatch[1].substr(0, 3)]
+        : new Date().getMonth();
+      const endYear = endMatch[0]
+        ? parseInt(endMatch[2])
+        : new Date().getFullYear();
+
+      const start = new Date(startYear, startMonth);
+      const end = new Date(endYear, endMonth);
+
+      while (start <= end) {
+        experienceMonths.add(`${start.getFullYear()}-${start.getMonth()}`);
+        start.setMonth(start.getMonth() + 1);
+      }
     });
 
-    const experienceYears = maxYear - minYear + 1;
-    document.getElementById("yearsExperience").textContent = `${experienceYears}+`;
+    const totalMonths = experienceMonths.size;
+    const years = Math.floor(totalMonths / 12);
+    const remainderMonths = totalMonths % 12;
+
+    document.getElementById("yearsExperience").textContent =
+      remainderMonths >= 6 ? `${years + 1}+` : `${years}+`;
   }
 
-  window.addEventListener("load", calculateYearsExperience);
+  window.addEventListener("load", calculateAccurateExperience);
 </script>
+
 
 </body>
 </html>
